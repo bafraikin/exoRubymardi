@@ -40,5 +40,5 @@ jour_7 = { :GOO => 17, :MMM => 14, :ADBE => 2, :EA=> 17, :BA => 7, :KO => 13, :X
 
 b = [jour_1,jour_2, jour_3, jour_4, jour_5, jour_6, jour_7]
 
-p trader_du_lundi(b)
+trader_du_lundi(b)
 

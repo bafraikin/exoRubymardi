@@ -1,11 +1,10 @@
+  benef = 0
 def trader_du_lundi(array)
 
-  jours_achat = 0
-  jours_revente = 0
-  benef = 0
   elem = [:GOO , :MMM , :ADBE , :EA , :BA , :KO , :XOM , :GPS , :MCD , :DIS , :CRM , :JNJ ]
 
   for action in elem do
+
     jours_achat = 0
     jours_revente = 0
     benef = 0

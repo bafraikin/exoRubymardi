@@ -4,6 +4,7 @@ def trader_du_dimanche(array)
   index_revente = 0
   benef = 0
 
+
   array.each_with_index do | prix, index|
     for index2 in (index+1)...(array.size) do
       if (array[index2] - prix) > benef

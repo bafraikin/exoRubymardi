@@ -10,15 +10,15 @@ def trader_du_dimanche(array)
         benef = array[index2] - prix
         index_achat = index
         index_revente = index2
-        puts benef
       else
         next
       end
     end
   end
-  a = [index_achat,index_revente]
+  puts "achat le jours #{index_achat} puis revente le jours #{index_revente}"
+ [index_achat, index_revente]
 end
 
 b = [17,3,6,9,15,8,6,1,10]
-puts trader_du_dimanche(b)
+p trader_du_dimanche(b)
 

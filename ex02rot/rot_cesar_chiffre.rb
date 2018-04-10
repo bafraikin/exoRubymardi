@@ -14,4 +14,4 @@ class String
   end 
 end
 
-puts "What a string!".chiffre_de_cesar
+puts "What a string!".chiffre_de_cesar(5)

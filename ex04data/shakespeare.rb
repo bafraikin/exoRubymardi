@@ -1,11 +1,10 @@
 
-#Ce programme decompose l'integrale de shakespeare ligne par ligne et compte et passe ensuite en revu l'entierté du dictionnaire afin de compter les mots qu'il y a dans cette ligne
+#Ce programme decompose l'integrale de shakespeare ligne par ligne puis passe ensuite en revu l'entierté du dictionnaire afin de compter les mots qu'il y a dans cette ligne
 
 
 
 #ce module reçoit une ligne et un mot du dictionnaire. 
 #Il va compter chaque occurence du mot dans une ligne et le rajouter au hash
-
 
 def count_word_in_line(ouane_line, word)
 

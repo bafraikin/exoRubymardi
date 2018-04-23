@@ -1,29 +1,29 @@
   benef = 0
-def trader_du_lundi(array)
+def trader_du_lundi(array) 
 
-  elem = [:GOO , :MMM , :ADBE , :EA , :BA , :KO , :XOM , :GPS , :MCD , :DIS , :CRM , :JNJ ]
+  elem = [:GOO , :MMM , :ADBE , :EA , :BA , :KO , :XOM , :GPS , :MCD , :DIS , :CRM , :JNJ ] 
 
-  for action in elem do
+  for action in elem do     #cette boucle for va faire contenir dans action ":GOO" et autre action
 
-    jours_achat = 0
-    jours_revente = 0
-    benef = 0
-    for jours in 0..6 do
-      prix = array[jours][action]
-      for jours2 in (jours + 1)..6 do
-        if (array[jours2][action] - prix) > benef
-          benef = array[jours2][action] - prix
-          jours_achat = jours
-          jours_revente = jours2
+    jours_achat = 0       #meilleur jour de revente trouvé
+    jours_revente = 0     #meilleur jour d'achat trouvé
+    benef = 0             #meilleur benef trouvé
+    for jours in 0..6 do    #parcours de toute la semaine 
+      prix = array[jours][action]  #fixe le prix de la journée dans une variable pour etre plus lisible
+      for jours2 in (jours + 1)..6 do   #reparcours de la semaine mais en partant du jour où est la 1ere boucle (je ne peux pas vendre avant d'acheter ) 
+        if (array[jours2][action] - prix) > benef # si le prix de la 2eme boucle - celui de la 1ere donne un meilleur benef que celui deja trouvé 
+          benef = array[jours2][action] - prix   #alors on enregistre toutes les coordonnés
+          jours_achat = jours                 #le jours d'achat qui a donné ce benef
+          jours_revente = jours2          # celui de la revente
         else
-          next
+          next     # sinon on change de jours ( on parle de la 2eme boucle ici)
         end
       end
     end
-    jours_achat+=1
-    jours_revente+=1
-    puts "pour #{action} achat le jours #{jours_achat} puis revente le jours #{jours_revente}"
-    p [jours_achat, jours_revente]
+    jours_achat+=1 #on ne peut pas dire qu'on achete au jours 0
+    jours_revente+=1 
+    puts "pour #{action} achat le jours #{jours_achat} puis revente le jours #{jours_revente}" #on affiche le resultat
+    p [jours_achat, jours_revente] 
   end
 end
 
